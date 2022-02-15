@@ -61,6 +61,8 @@ def gold(a, b, eps):
 
 
 if __name__ == '__main__':
+    #print('f(x) = ', func_task(0.357403))
+
     print('e = ', math.e)
     a = 0
     b = 1
@@ -80,6 +82,8 @@ if __name__ == '__main__':
     fx = func_task(x)
     print('x =', x)
     print('f(x) = ', fx)
+
+
 
 
 
