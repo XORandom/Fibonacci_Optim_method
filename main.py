@@ -1,6 +1,4 @@
 import math
-#import numpy as np
-#import matplotlib.pyplot as plt
 
 
 def func_task(x):
@@ -21,6 +19,8 @@ def fib(input_num, show=0):
 
 
 def fibonacci(a, b, eps, N):
+    print("Поиск методом Фибоначчи")
+    print('a =', a, '; b =', b, '; eps =', eps, '; N =', N)
     a0 = a
     b0 = b
     k = 0
@@ -41,6 +41,7 @@ def fibonacci(a, b, eps, N):
 
 
 def gold(a, b, eps):
+    print("Повысим точность")
     g = (math.sqrt(5) - 1.0) / 2
     k = 0
     a1 = a + (1 - g) * (b - a)
@@ -63,18 +64,19 @@ if __name__ == '__main__':
     print('e = ', math.e)
     a = 0
     b = 1
-    N = 10
+    N = 20
     eps = 0.000001
 
     x = fibonacci(a, b, eps, N)
     fx = func_task(x)
-    print("Поиск методом Фибоначчи")
     fib(N, 1)
-    print('x =', round(x, 6))
-    print('f(x) =', round(fx, 6))
+    print('x =', x)
+    print('f(x) = ', fx)
+    #print('Округлим значение')
+    #print('x =', round(x, 6))
+    #print('f(x) =', round(fx, 6))
 
     x = gold(a, b, eps)
-    print("Повысим точность")
     fx = func_task(x)
     print('x =', x)
     print('f(x) = ', fx)
