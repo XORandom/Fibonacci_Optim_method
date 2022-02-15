@@ -7,15 +7,13 @@ def func_task(x):
     return 2 * math.pow(x, 2) - math.exp(x)
 
 
-''' Поиск последовательности Фибоначчи 
-к примеру мы хотим сначала 10 элемент последовательности Фибоначчи, 
-для этого сначала посчитаем 10 элементов, а потом обратимся к 10
-это позволяет экономить время, посколько задав изначально число элементов, нам надо ихт найти всего 1 раз
-'''
+# Поиск последовательности Фибоначчи
 def fib(input_num):
-    fb = {1: 1, 2: 1}
-    while id < input_num:
-        fb[id]
+    a = int(input_num)
+    fb = [1, 1]
+    for x in range(2, a):
+        fb.append(fb[x - 2] + fb[x - 1])
+    return fb[input_num-1]
 
 
 def fibonacci(a, b, eps, N=10):
@@ -39,10 +37,10 @@ def fibonacci(a, b, eps, N=10):
 
 
 if __name__ == '__main__':
-    '''
     print('e = ', math.e)
     a = 0
     b = 1
+    print(fib(0))
     eps = 0.000001
     x = fibonacci(a, b, eps)
     fx = func_task(x)
@@ -51,5 +49,5 @@ if __name__ == '__main__':
     print('округление до 6 знака')
     print('x =', round(x, 6))
     print('f(x) =', round(fx, 6))
-    '''
-    print(fib(200))
+
+
